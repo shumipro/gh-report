@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  database: ghreport
+  encoding: unicode
+  username: <%= ENV['USER'] %>
+  password:
+  host: localhost
+
+test: &test
+  adapter: postgresql
+  database: ghreport_test<%= ENV['TEST_ENV_NUMBER'] %>
+  username: <%= ENV['USER'] %>
+  password:
+  host: localhost
+  min_messages: WARNING
+
+
