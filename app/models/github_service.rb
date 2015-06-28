@@ -14,6 +14,8 @@ class GithubService
         url_to_detail[_.payload.issue.html_url][:comments] << _.payload.comment.html_url
       when "PullRequestEvent"
         url_to_detail[_.payload.pull_request.html_url] ||= {title: _.payload.pull_request.title, comments: []}
+      when "PullRequestReviewCommentEvent"
+        url_to_detail[_.payload.pull_request.html_url][:comments] << _.payload.comment.html_url
       end
     end
 
