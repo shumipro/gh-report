@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'dotenv-rails'
+gem 'zocial-rails'
 
 group :development do
   gem 'annotate'
