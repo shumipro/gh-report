@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
         token:    auth_hash['credentials']['token']
       )
     end
+    log_in(@user)
     redirect_to '/'
   end
 
