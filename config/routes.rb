@@ -1,10 +1,16 @@
 # == Route Map
 #
-# Prefix Verb URI Pattern                        Controller#Action
-#        GET  /auth/:provider/callback(.:format) sessions#create
+#  Prefix Verb URI Pattern                        Controller#Action
+#    root GET  /                                  roots#index
+# reports GET  /reports(.:format)                 reports#index
+#         GET  /auth/:provider/callback(.:format) sessions#create
 #
 
 Rails.application.routes.draw do
-  get '/auth/:provider/callback', to: 'sessions#create'
+  root      to: 'roots#index'
+
+  resources :reports, only: [:index]
+  get       '/auth/:provider/callback', to: 'sessions#create'
+  delete    'logout',                   to: 'sessions#destroy'
 end
 
