@@ -15,6 +15,11 @@ class SessionsController < ApplicationController
     redirect_to reports_url
   end
 
+  def destroy
+    log_out
+    redirect_to root_url
+  end
+
   protected
 
   def auth_hash

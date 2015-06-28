@@ -7,8 +7,10 @@
 #
 
 Rails.application.routes.draw do
-  root to: 'roots#index'
+  root      to: 'roots#index'
+
   resources :reports, only: [:index]
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get       '/auth/:provider/callback', to: 'sessions#create'
+  delete    'logout',                   to: 'sessions#destroy'
 end
 
