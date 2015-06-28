@@ -15,6 +15,7 @@ gem 'dotenv-rails'
 gem 'zocial-rails'
 gem "twitter-bootstrap-rails"
 gem 'octokit'
+gem 'redcarpet'
 
 group :development do
   gem 'annotate'
