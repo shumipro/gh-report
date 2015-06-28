@@ -13,6 +13,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'dotenv-rails'
 gem 'zocial-rails'
+gem "twitter-bootstrap-rails"
 
 group :development do
   gem 'annotate'
