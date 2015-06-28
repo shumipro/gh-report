@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       )
     end
     log_in(@user)
-    redirect_to '/'
+    redirect_to reports_url
   end
 
   protected
