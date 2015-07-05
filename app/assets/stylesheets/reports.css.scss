@@ -1,29 +1,41 @@
-.report {
-  width: 694px;
-  border: 1px solid #bfccd1;
-  border-radius: 3px;
-  margin-bottom: 20px;
+.report-wrapper {
+  > img {
+    position: absolute;
+    border-radius: 3px;
+  }
 
-  > .report-header {
-    background-color: #f2f8fa;
-    border-bottom: 1px solid #dde4e6;
-    padding: 10px 15px;
-    font-size: 13px;
+  .report {
+    width: 694px;
+    border: 1px solid #bfccd1;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-left: 64px;
 
-    .user-name {
-      font-weight: bold;
+    > .report-header {
+      background-color: #f2f8fa;
+      border-bottom: 1px solid #dde4e6;
+      padding: 10px 15px;
+      font-size: 13px;
+
+      .user-name {
+        font-weight: bold;
+      }
+    }
+
+    > .report-body {
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1.6;
+
+      ul {
+        > li {
+          margin-left: 28px;
+        }
+      }
     }
   }
 
-  > .report-body {
-    padding: 15px;
-    font-size: 14px;
-    line-height: 1.6;
-
-    ul {
-      > li {
-        margin-left: 28px;
-      }
-    }
+  > a.btn {
+    margin-left: 64px;
   }
 }
