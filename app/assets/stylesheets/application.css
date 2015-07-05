@@ -13,12 +13,13 @@
  *= require_tree .
  *= require_self
  *= require zocial
+ *= require primer
  */
 
-body {
-  width: 600px;
-  margin: 0 auto;
-  padding: 30px;
-  border: 1px solid #ddd;
+h1 {
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 
