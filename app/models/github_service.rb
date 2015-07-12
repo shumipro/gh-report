@@ -1,8 +1,14 @@
 class GithubService
-  def self.events(user, range:)
+  def self.events(user, range:, page: 1)
     client = Octokit::Client.new(login: user.nickname, access_token: user.token)
-    events = client.user_events(user.nickname, page: 1)
-    events.select { |e| range.first < e[:created_at] && e[:created_at] < range.last }
+    events = client.user_events(user.nickname, page: page)
+    selected_events = events.select { |e| range.first < e[:created_at] && e[:created_at] < range.last }
+
+    if selected_events.size == events.size
+      selected_events + self.events(user, range: range, page: page + 1)
+    else
+      selected_events
+    end
   end
 
   def self.today_events(user)
