@@ -1,0 +1,6 @@
+.header
+  - if logged_in?
+    = link_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-default'
+  - else
+    = link_to('登録・ログイン', '/auth/github', class: 'btn btn-primary')
+
