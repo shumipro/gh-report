@@ -1,5 +1,8 @@
-%h1
-  日報
+.tabnav-wrapper
+  .tabnav
+    .tabnav-tabs
+      = link_to '日報', reports_path(range: :day), class: "tabnav-tab #{(params[:range].blank? || params[:range] == 'day') ? 'selected' : nil}"
+      = link_to '週報', reports_path(range: :week), class: "tabnav-tab #{params[:range] == 'week' ? 'selected' : nil}"
 
 .report-wrapper
   = image_tag current_user.image, size: "48x48"

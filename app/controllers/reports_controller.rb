@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   def index
-    events = if params[:weekly].present?
+    events = if params[:range] == 'week'
       events = GithubService.weekly_events(current_user)
     else
       events = GithubService.daily_events(current_user)
