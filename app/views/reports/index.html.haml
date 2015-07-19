@@ -1,6 +1,13 @@
 %h1
   日報
 
-= @markdown.html_safe
+.report-wrapper
+  = image_tag current_user.image, size: "48x48"
 
-= link_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-default'
+  .report
+    .report-header
+      %span.user-name
+        = current_user.nickname
+      's report
+    .report-body
+      = @markdown.html_safe

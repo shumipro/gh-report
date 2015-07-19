@@ -15,7 +15,6 @@ gem 'dotenv-rails'
 gem 'zocial-rails'
 gem 'octokit'
 gem 'redcarpet'
-gem 'bootstrap-sass', '~> 3.3.5'
 
 group :development do
   gem 'annotate'

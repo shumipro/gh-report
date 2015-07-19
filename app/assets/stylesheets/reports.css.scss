@@ -1,0 +1,69 @@
+.report-wrapper {
+  > img {
+    position: absolute;
+    border-radius: 3px;
+  }
+
+  .report {
+    position: relative;
+    width: 694px;
+    border: 1px solid #bfccd1;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-left: 64px;
+
+    @mixin right-triangle($pixel, $color) {
+      border-color: transparent;
+      border-style: solid solid outset;
+      border-right-color: $color;
+      border-width: $pixel;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 11px;
+      left: -16px;
+      @include right-triangle(8px, #bfccd1);
+    }
+
+    &:after {
+      position: absolute;
+      top: 11px;
+      left: -16px;
+      margin-top: 1px;
+      margin-left: 2px;
+      @include right-triangle(7px, #f2f8fa);
+    }
+
+    > .report-header {
+      background-color: #f2f8fa;
+      border-bottom: 1px solid #dde4e6;
+      padding: 10px 15px;
+      font-size: 13px;
+
+      .user-name {
+        font-weight: bold;
+      }
+    }
+
+    > .report-body {
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1.6;
+
+      ul {
+        > li {
+          margin-left: 28px;
+        }
+      }
+    }
+  }
+
+  > a.btn {
+    margin-left: 64px;
+  }
+}
